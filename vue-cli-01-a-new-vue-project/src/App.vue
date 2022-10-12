@@ -2,7 +2,7 @@
   <section>
     <header><h1>My Friends</h1></header>
     <ul>
-      <friend-contact></friend-contact>
+      <friend-contact name="dasd" phone-namber="0123" email-address="wpkm@sfo.com"></friend-contact>
       <friend-contact></friend-contact>
     </ul>
   </section>
