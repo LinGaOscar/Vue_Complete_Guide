@@ -1,9 +1,18 @@
 <template>
   <section>
     <header><h1>My Friends</h1></header>
+    <new-friend></new-friend>
     <ul>
-      <friend-contact name="dasd" phone-number="0123" email-address="wpkm@sfo.com"></friend-contact>
-      <friend-contact name="dsdasd" phone-number="01123" email-address="wpkmcc@sfo.com"></friend-contact>
+      <friend-contact
+        v-for="friend in friends"
+        :key="friend.id"
+        :id="friend.id"
+        :name="friend.name"
+        :phone-number="friend.phone"
+        :email-address="friend.email"
+        :is-favorite="friend.isFavorite"
+        @toggle-favorite="toggleFavoriteStatus"
+      ></friend-contact>
     </ul>
   </section>
 </template>
@@ -17,21 +26,31 @@ export default {
           name: "Manuel Lorenz",
           phone: "0123456789",
           email: "sss@dff.com",
+          isFavorite: true,
         },
         {
           id: "julie",
           name: "Julie Jones",
           phone: "0123456789",
           email: "ddd@dff.com",
+          isFavorite: false,
         },
       ],
     };
+  },
+  methods: {
+    toggleFavoriteStatus(friendId) {
+      const identifiedFriend = this.friends.find(
+        (friend) => friend.id === friendId
+      );
+      identifiedFriend.isFavorite = !identifiedFriend.isFavorite;
+    },
   },
 };
 </script>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Jost&display=swap");
 
 * {
   box-sizing: border-box;
@@ -63,7 +82,8 @@ header {
   list-style: none;
 }
 
-#app li {
+#app li,
+form {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
   margin: 1rem auto;
   border-radius: 10px;
@@ -95,5 +115,19 @@ header {
   background-color: #ec3169;
   border-color: #ec3169;
   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.26);
+}
+
+#app input {
+  font: inherit;
+  padding: 0.15rem;
+}
+#app label {
+  font-weight: bold;
+  margin-right: 1rem;
+  width: 7rem;
+  display: inline-block;
+}
+#app form div {
+  margin: 1rem 0;
 }
 </style>
