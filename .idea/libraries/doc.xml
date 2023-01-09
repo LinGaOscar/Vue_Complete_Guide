@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="doc">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/doc/vue-cli-01-a-new-vue-project.zip!/" />
+      <root url="jar://$PROJECT_DIR$/doc/cmp-intro-01-starting-setup.zip!/" />
+      <root url="jar://$PROJECT_DIR$/doc/prj-monster-01-starting-setup.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
