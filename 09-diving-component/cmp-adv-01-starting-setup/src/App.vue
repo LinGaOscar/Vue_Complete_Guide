@@ -1,5 +1,4 @@
 <template>
-  <div>
     <the-header></the-header>
     <!-- <TheHeader/> -->
     <button @click="setSelectedComponent('active-goals')">Active Goals</button>
@@ -9,7 +8,6 @@
     <keep-alive>
       <component :is="selectedComponent"></component>
     </keep-alive>
-  </div>
 </template>
 
 <script>
