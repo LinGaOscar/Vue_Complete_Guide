@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import BaseCard from "@/components/BaseCard";
+import BaseCard from "@/components/UI/BaseCard";
 
 export default {
   components: {BaseCard},

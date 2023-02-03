@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import TheHeader from './components/TheHeader.vue';
+import TheHeader from './components/layout/TheHeader.vue';
 // import UserInfo from './components/UserInfo.vue';
 // import BadgeList from './components/BadgeList.vue';
 // import CourseGoals from "@/components/CourseGoals";
