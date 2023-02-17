@@ -59,6 +59,7 @@ export default {
         userName: this.enteredName,
         rating: this.chosenRating,
       });
+      fetch('https://vue-http-demo-1e6af-default-rtdb.firebaseio.com/');
 
       this.enteredName = '';
       this.chosenRating = null;
