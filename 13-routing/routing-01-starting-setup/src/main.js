@@ -6,6 +6,8 @@ import TeamsList from "@/components/teams/TeamsList";
 import UsersList from "@/components/users/UsersList";
 import TeamMembers from "@/components/teams/TeamMembers";
 import NotFound from "@/components/nav/NotFound";
+import TeamsFooter from "@/components/teams/TeamsFooter";
+import UserFooter from "@/components/users/UserFooter";
 
 const router = createRouter({
     history: createWebHistory(),
@@ -14,7 +16,7 @@ const router = createRouter({
         {
             name: 'teams',
             path: '/teams',
-            component: TeamsList,
+            components: {default: TeamsList, footer: TeamsFooter},
             children: [
                 {
                     name: 'team-members',
@@ -24,7 +26,12 @@ const router = createRouter({
                 },
             ]
         },//our-domain.com/teams => TeamsList
-        {path: '/users', component: UsersList},
+        {
+            path: '/users',
+            components: {
+                default: UsersList, footer: UserFooter
+            }
+        },
         {path: '/:notFound(.*)', component: NotFound}
     ],
     linkActiveClass: 'active',
