@@ -13,10 +13,16 @@ export default {
     UserItem,
   },
   inject: ['users'],
-  methods:{
-    confirmInput(){
+  methods: {
+    confirmInput() {
       this.$router.push('/teams');
     }
+  },
+  beforeRouteEnter(to, from, next) {
+    console.log('UserList Cmp beforeRouteEnter');
+    console.log(to, from);
+    next();
+
   }
 };
 </script>
