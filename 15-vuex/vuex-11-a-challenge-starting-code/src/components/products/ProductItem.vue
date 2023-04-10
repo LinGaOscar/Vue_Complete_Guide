@@ -2,7 +2,7 @@
   <li class="product">
     <div class="product__data">
       <div class="product__image">
-        <img :src="image" :alt="title" />
+        <img :src="image" :alt="title"/>
       </div>
       <div class="product__text">
         <h3>{{ title }}</h3>
@@ -20,15 +20,14 @@
 
 <script>
 export default {
-  inject: ['addProductToCart'],
   props: ['id', 'image', 'title', 'price', 'description'],
   methods: {
     addToCart() {
-      this.addProductToCart({
+      this.$store.dispatch('carts/addToCart', {
         id: this.id,
-        image: this.image,
-        title: this.title,
-        price: this.price,
+        // image: this.image,
+        // title: this.title,
+        // price: this.price,
       });
     },
   },

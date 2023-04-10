@@ -1,7 +1,7 @@
 <template>
   <li>
     <div>
-      <img :src="image" :alt="title" />
+      <img :src="image" :alt="title"/>
     </div>
     <div>
       <h3>{{ title }}</h3>
@@ -23,7 +23,6 @@
 
 <script>
 export default {
-  inject: ['removeProductFromCart'],
   props: ['prodId', 'title', 'image', 'price', 'qty'],
   computed: {
     itemTotal() {
@@ -32,7 +31,9 @@ export default {
   },
   methods: {
     remove() {
-      this.removeProductFromCart(this.prodId);
+      this.$store.dispatch('carts/removeFromCart', {
+        productId: this.prodId
+      });
     }
   }
 };
