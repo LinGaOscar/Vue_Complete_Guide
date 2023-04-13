@@ -1,11 +1,11 @@
 <template>
-  <section></section>
+  DETAILS FOR COACH
+  <router-view/>
+  <router-link to="/coaches/c1/contact">Contact</router-link>
 </template>
 
 <script>
-export default {
-  name: "CoachDetail"
-}
+export default {}
 </script>
 
 <style scoped>

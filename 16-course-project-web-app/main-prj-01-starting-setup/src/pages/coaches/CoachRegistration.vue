@@ -1,10 +1,9 @@
 <template>
-  <section></section>
+  REGISTER
 </template>
 
 <script>
 export default {
-  name: "CoachRegistration"
 }
 </script>
 
