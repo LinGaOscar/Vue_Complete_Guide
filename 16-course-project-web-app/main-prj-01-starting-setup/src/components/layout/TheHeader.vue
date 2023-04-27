@@ -7,7 +7,7 @@
       <ul>
         <li>
           <router-link to="/coaches">All Coaches</router-link>
-          <router-link to="/request">Request</router-link>
+          <router-link to="/requests">Request</router-link>
         </li>
       </ul>
     </nav>
