@@ -10,10 +10,12 @@ export default {
             areas: data.areas
         };
 
-        const response = await fetch(`https://vue-http-demo-931db-default-rtdb.asia-southeast1.firebasedatabase.app/coaches/${userId}.json`, {
-            method: 'PUT',
-            body: JSON.stringify(coachData)
-        });
+        const token = context.rootGetters.token;
+        const response = await fetch(
+            `https://vue-http-demo-931db-default-rtdb.asia-southeast1.firebasedatabase.app/coaches/${userId}.json?auth=` + token, {
+                method: 'PUT',
+                body: JSON.stringify(coachData)
+            });
 
         // const responseData = response.json();
 
