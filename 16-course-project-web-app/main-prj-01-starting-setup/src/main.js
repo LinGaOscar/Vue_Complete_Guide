@@ -2,7 +2,7 @@ import {createApp} from 'vue';
 
 import App from "@/App";
 import router from "@/router";
-import store from "@/pages/store/index";
+import store from "@/store/index";
 import BaseCard from "@/components/ui/BaseCard";
 import BaseButton from "@/components/ui/BaseButton";
 import BaseBadge from "@/components/ui/BaseBadge";

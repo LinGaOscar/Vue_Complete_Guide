@@ -1,7 +1,7 @@
 import {createStore} from "vuex";
-import coachesModule from "@/pages/store/modules/coaches/index";
-import requestModule from "@/pages/store/modules/request/index";
-import authModule from "@/pages/store/modules/auth/index";
+import coachesModule from "@/store/modules/coaches";
+import requestModule from "@/store/modules/request";
+import authModule from "@/store/modules/auth";
 
 const store = createStore({
     modules: {

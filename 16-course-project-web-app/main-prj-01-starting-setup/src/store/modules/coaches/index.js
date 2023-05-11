@@ -1,6 +1,6 @@
-import mutations from "@/pages/store/modules/coaches/mutations";
-import actions from "@/pages/store/modules/coaches/actions";
-import getters from "@/pages/store/modules/coaches/getters";
+import mutations from "@/store/modules/coaches/mutations";
+import actions from "@/store/modules/coaches/actions";
+import getters from "@/store/modules/coaches/getters";
 
 export default {
     namespaced: true,
