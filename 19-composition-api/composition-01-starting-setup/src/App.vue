@@ -1,22 +1,32 @@
 <template>
   <section class="container">
-    <h2>{{ userName }}</h2>
+    <h2>{{ user.name }}</h2>
+    <h3>{{ user.age }}</h3>
+    <button></button>
   </section>
 </template>
 
 <script>
-import {ref} from "vue";
+import {reactive} from "vue";
 
 export default {
   setup() {
-    const uName = ref('Maximilian');
+    // const uName = ref('Maximilian');
+    // const uAge = ref(31);
+    const user = reactive({
+      name: 'Maximilian',
+      age: 32
+    })
 
-    setTimeout(()=>{
-      uName.value = 'Max'
-    },2000);
+    setTimeout(function () {
+      // uName.value = 'Max';
+      // uAge.value = 32;
+      user.name = 'Max';
+      user.age = 33
+    }, 2000);
 
-    return{
-      userName: uName
+    return {
+      user: user
     };
   }
   // data() {
